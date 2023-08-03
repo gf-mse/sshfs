@@ -28,6 +28,23 @@ Latest version
 The latest version and more information can be found on
 http://github.com/libfuse/sshfs
 
+Build notes
+===========
+
+ * https://github.com/osxfuse/osxfuse/issues/751
+
+```
+brew install glib automake pkg-config
+
+aclocal
+autoconf
+autoheader
+automake --foreign --add-missing --copy
+./configure --prefix=/usr/local
+make
+sudo make install
+```
+
 
 How to mount a filesystem
 =========================
